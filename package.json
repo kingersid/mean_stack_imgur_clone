@@ -1,0 +1,22 @@
+{
+  "name": "imgur_clone",
+  "version": "1.0.0",
+  "description": "imgur_clone : social photo share site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingersid/mean_stack_imgur_clone.git"
+  },
+  "keywords": [
+    "imgur"
+  ],
+  "author": "siddharth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kingersid/mean_stack_imgur_clone/issues"
+  },
+  "homepage": "https://github.com/kingersid/mean_stack_imgur_clone#readme"
+}
