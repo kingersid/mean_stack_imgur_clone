@@ -8,19 +8,22 @@ var path = require('path'),
     errorHandler = require('errorhandler'),
     moment = require('moment'),
     multer = require('multer'),
-    jade = require('jade');
+    jade = require('jade'),
+    cons = require('consolidate')
 
 module.exports = function(app) {
+    app.use(bodyParser.urlencoded({extnded:true}))
     app.use(morgan('dev'));
     app.use(methodOverride());
     app.use(cookieParser('some-secret-value-here'));
     app.use('/public/', express.static(path.join(__dirname, '../public')));
+    app.engine('html',cons.swig)
     app.set('views', path.join(__dirname, '../views'));
-    app.set('view engine','jade')
-    
+    app.set('view engine','html')
     routes(app);
     if ('development' === app.get('env')) {
        app.use(errorHandler());
     }
     return app;
 };
+
